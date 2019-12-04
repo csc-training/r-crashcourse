@@ -232,7 +232,9 @@ ggplot(data = surveys_complete)
 ggplot(data = surveys_complete, 
 mapping = aes(x = weight, y = hindfoot_length, color = species_id))
 
-# we're telling R that we want to create a plot with weight on the x axis, hindfoot length on the y axis, with colors according to the species
+# we're telling R that we want to create a plot with weight on
+# the x axis, hindfoot length on the y axis, with colors
+# according to the species
 ```
 
 - add ‘geoms’ – graphical representations of the data in the plot (points, lines, bars). `ggplot2` offers many different geoms:
@@ -286,6 +288,8 @@ By adding points to boxplot, we can have a better idea of the number of measurem
 ggplot(data = surveys_complete, mapping = aes(x = species_id, y = weight)) +
     geom_boxplot(alpha = 0) +
     geom_jitter(alpha = 0.3, color = "tomato")
+
+# alpha is used to control transparency
 
 # geom_jitter is like geom_point but adds some random
 # variation to the position of each point
