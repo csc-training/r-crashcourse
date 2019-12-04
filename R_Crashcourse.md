@@ -181,7 +181,15 @@ round(3.14159, digits = 2) # rounding to two digits
 
 #### 9. Downloading and importing data
 
-We can now use the R function `download.file()` to download a CSV file that contains a large amount of biological survey data. We will then use `read.csv()` to load into memory the content of the CSV file.
+We can now use the R function `download.file()` to download a CSV file that contains a large amount of biological survey data. We will then use `read_csv()` to load into memory the content of the CSV file.
+
+Before starting, let's load the `tidyverse` package collection. The `read_csv()` function comes as part of it.
+
+```r
+library(tidyverse)
+```
+
+Then let's download and import the data:
 
 ```r
 download.file(url = "https://tinyurl.com/surveyscomplete", 
@@ -202,11 +210,7 @@ head(surveys_complete)
 
 #### 10. Creating a scatterplot using `ggplot2`
 
-`ggplot2` is a plotting package that makes it simple to create complex plots in R. It comes as part of the `tidyverse` package collection, which we can load as follows:
-
-```r
-library(tidyverse)
-```
+`ggplot2` is a plotting package that makes it simple to create complex plots in R.  It also comes as part of the `tidyverse` package collection.
 
 `ggplot2` graphics are built step by step by adding new elements. To build a `ggplot2` plot, we will use the following basic template that can be used for different types of plots:
 
